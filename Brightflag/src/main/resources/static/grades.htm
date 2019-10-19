@@ -1,0 +1,15 @@
+<div class="container">
+
+		<table class="table">
+			<tr>
+				<th>Student Name</th>
+				<th>Subject</th>
+				<th>Grade</th>
+			</tr>
+			<tr ng-repeat="grade in grades">
+				<td>{{grade.firstName + " " + grade.lastName}}</td>
+				<td>{{grade.subjectName}}</td>
+				<td>{{grade.grade}}</td>
+			</tr>
+		</table>
+	</div>

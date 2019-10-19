@@ -1,0 +1,23 @@
+<div class="container">
+
+		<table class="table">
+			<tr>
+				<th>Student ID</th>
+				<th>Student Name</th>
+				<th>Subject</th>
+				<th>Grade</th>
+				<th>Options</th>
+			</tr>
+			<tr ng-repeat="student in studentInfo">
+				<td>{{student.studentID}}</td>
+				<td>{{student.firstName + " " + student.lastName}}</td>
+				<td>
+					<select name="subjects" ng-model="selectedItem">
+					  <option value="{{subject.subjectID}}" ng-repeat="subject in student.subjects">{{subject.subjectName}}</option>
+					</select>
+				</td>
+				<td><input type="number" min="0" max="100" ng-model="currentGrade"></td>
+				<td><button type="button" class="btn btn-primary" ng-click="saveDetails(student.studentID,selectedItem,currentGrade)">Add</button></td>
+			</tr>
+		</table>
+	</div>
